@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MatCatalogoComponent implements OnInit {
   @Input() catconfig: Config;
+
   constructor() { }
 
   ngOnInit(): void { }

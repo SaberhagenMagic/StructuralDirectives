@@ -1,3 +1,6 @@
 <h3>Directiva Estructural</h3>
-<app-catalogo [field]=configClientes [group]='forma' *appMatCatalogo="let param from 'mensaje';"></app-catalogo>
+<app-catalogo [field]=configClientes [group]='forma' *appMatCatalogo="configClientes"></app-catalogo>
+<div *appMatCatalogo="configClientes; let _con = config">
+    <button>{{ _con.placeholder }}</button>
+</div>
 <hr>

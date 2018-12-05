@@ -31,6 +31,7 @@ import { MatCatalogoDirective } from './directives/mat-catalogo.directive';
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MatCatalogoComponent]
 })
 export class AppModule { }
