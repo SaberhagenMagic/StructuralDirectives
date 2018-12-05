@@ -1,0 +1,7 @@
+<mat-form-field class="matcatalogo">
+    <mat-select [placeholder]=catconfig.placeholder>
+        <mat-option *ngFor="let item of catconfig.lsItem" [value]="item.valor">
+            {{ item.descripcion }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
