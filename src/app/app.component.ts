@@ -17,13 +17,15 @@ import { DataService } from './services/data.service';
 export class AppComponent implements OnInit {
   forma: FormGroup;
   matCatConfig = new Config();
+  valor: string;
 
   catClientes = this.srv.getClientes();
   configClientes: FieldConfig = {
     type: 'select',
     label: 'Clientes',
     name: 'catClientes',
-    options: this.catClientes
+    options: this.catClientes,
+    // value: '5c06df970e7b8dccc64071c5'
   };
 
   constructor( private srv: DataService) {
@@ -34,6 +36,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.matCatConfig.placeholder = 'Seleccionar Cliente';
     this.matCatConfig.lsItem = this.catClientes;
+  }
+
+  getCliente(obj: any) {
+    console.log('Valor Cliente');
+    console.log(obj);
   }
 
 }

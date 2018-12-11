@@ -1,0 +1,10 @@
+.content {
+    margin-top: 5px;
+    border: 1px #888888 dashed;
+    padding: 15px;
+}
+
+.content h4 {
+    text-align: center;
+    margin: 0;
+}

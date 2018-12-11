@@ -1,6 +1,17 @@
 <h3>Directiva Estructural</h3>
-<app-catalogo [field]=configClientes [group]='forma' *appMatCatalogo="configClientes"></app-catalogo>
-<div *appMatCatalogo="configClientes; let _con = config">
-    <button>{{ _con.placeholder }}</button>
+<div class="content">
+    <h4>Directiva 1</h4>
+    <app-catalogo [field]=configClientes [group]='forma' *appMatCatalogo="configClientes"></app-catalogo>
+    <!-- <div *appMatCatalogo="configClientes; let _con = config">
+        <button>{{ _con.placeholder }}</button>
+    </div> -->
+</div>
+<div class="content">
+    <h4>Directiva 2</h4>
+    <app-catalogo [field]=configClientes [group]='forma' *appMatCatalogo2="let cliente of configClientes;"></app-catalogo>
+    <div *appMatCatalogo2="let cliente of configClientes; ">
+        <span>{{ cliente.selected }}</span>
+    </div>
 </div>
 <hr>
+<!-- <pre>{{ configClientes | json }}</pre> -->

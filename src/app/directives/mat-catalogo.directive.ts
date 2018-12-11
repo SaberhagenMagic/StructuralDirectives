@@ -14,6 +14,7 @@ export class MatCatalogoDirective implements OnInit {
     this.catalogConfig = new Config();
     this.catalogConfig.placeholder = data['label'];
     this.catalogConfig.lsItem = data['options'];
+    this.catalogConfig.selected = data['value'];
     this.context = {
       config: this.catalogConfig
     };
@@ -25,13 +26,13 @@ export class MatCatalogoDirective implements OnInit {
     private template: TemplateRef<any>,
     private resolver: ComponentFactoryResolver
   ) {
-    console.log('Directiva - Constructor');
+    // console.log('Directiva - Constructor');
     // console.log(this.el);
     // this.view.createEmbeddedView(this.template);
   }
 
   ngOnInit() {
-    console.log('Directiva - Inicialicizando');
+    // console.log('Directiva - Inicialicizando');
     this.view.clear();
     const matCatalogo = this.resolver.resolveComponentFactory(MatCatalogoComponent);
     const componentRef = this.view.createComponent(matCatalogo);

@@ -14,13 +14,15 @@ import { MatCatalogoComponent } from './components/matcatalogo/matcatalogo.compo
 
 // Directives
 import { MatCatalogoDirective } from './directives/mat-catalogo.directive';
+import { MatCatalogo2Directive } from './directives/mat-catalogo2.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatalogoComponent,
     MatCatalogoComponent,
-    MatCatalogoDirective
+    MatCatalogoDirective,
+    MatCatalogo2Directive
   ],
   imports: [
     // BrowserModule,
